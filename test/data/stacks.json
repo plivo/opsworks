@@ -1,0 +1,104 @@
+{
+    "Stacks": [
+        {
+            "StackId": "fake-stack-id-123456789", 
+            "ServiceRoleArn": "arn:aws:iam::123456789:role/aws-opsworks-service-role", 
+            "VpcId": "vpc-k381wugh", 
+            "DefaultRootDeviceType": "ebs", 
+            "Name": "wordpress-production", 
+            "HostnameTheme": "Layer_Dependent", 
+            "UseCustomCookbooks": true, 
+            "UseOpsworksSecurityGroups": false, 
+            "Region": "us-west-1", 
+            "DefaultAvailabilityZone": "us-west-1b", 
+            "CreatedAt": "2016-02-19T22:41:22+00:00", 
+            "CustomJson": "{\"env\":\"test\",\"stackjsontest\":\"somevalue\"}",
+            "CustomCookbooksSource": {
+                "Url": "****FILTERED****", 
+                "Username": "****FILTERED****", 
+                "Password": "*****FILTERED*****", 
+                "Type": "s3"
+            }, 
+            "ConfigurationManager": {
+                "Version": "12", 
+                "Name": "Chef"
+            }, 
+            "ChefConfiguration": {}, 
+            "DefaultSubnetId": "subnet-12345678", 
+            "DefaultSshKeyName": "production-key", 
+            "DefaultInstanceProfileArn": "arn:aws:iam::123456789:instance-profile/aws-opsworks-ec2-role", 
+            "Attributes": {
+                "Color": "rgb(45, 114, 184)"
+            }, 
+            "DefaultOs": "Custom", 
+            "Arn": "arn:aws:opsworks:us-west-1:123456789:stack/fake-stack-id-123456789/", 
+            "AgentVersion": "4006-20160121174723"
+        },
+        {
+            "StackId": "fake-stack-id-123456789", 
+            "ServiceRoleArn": "arn:aws:iam::123456789:role/aws-opsworks-service-role", 
+            "VpcId": "vpc-k381wugh", 
+            "DefaultRootDeviceType": "ebs", 
+            "Name": "wordpress-staging", 
+            "HostnameTheme": "Layer_Dependent", 
+            "UseCustomCookbooks": true, 
+            "UseOpsworksSecurityGroups": false, 
+            "Region": "us-west-1", 
+            "DefaultAvailabilityZone": "us-west-1b", 
+            "CreatedAt": "2016-02-19T22:41:22+00:00", 
+            "CustomCookbooksSource": {
+                "Url": "****FILTERED****", 
+                "Username": "****FILTERED****", 
+                "Password": "*****FILTERED*****", 
+                "Type": "s3"
+            }, 
+            "ConfigurationManager": {
+                "Version": "12", 
+                "Name": "Chef"
+            }, 
+            "ChefConfiguration": {}, 
+            "DefaultSubnetId": "subnet-12345678", 
+            "DefaultSshKeyName": "production-key", 
+            "DefaultInstanceProfileArn": "arn:aws:iam::123456789:instance-profile/aws-opsworks-ec2-role", 
+            "Attributes": {
+                "Color": "rgb(45, 114, 184)"
+            }, 
+            "DefaultOs": "Custom", 
+            "Arn": "arn:aws:opsworks:us-west-1:123456789:stack/fake-stack-id-123456789/", 
+            "AgentVersion": "4006-20160121174723"
+        },
+        {
+            "StackId": "fake-stack-id-123456789", 
+            "ServiceRoleArn": "arn:aws:iam::123456789:role/aws-opsworks-service-role", 
+            "VpcId": "vpc-k381wugh", 
+            "DefaultRootDeviceType": "ebs", 
+            "Name": "wordpress-dev", 
+            "HostnameTheme": "Layer_Dependent", 
+            "UseCustomCookbooks": true, 
+            "UseOpsworksSecurityGroups": false, 
+            "Region": "us-east-1", 
+            "DefaultAvailabilityZone": "us-east-1b", 
+            "CreatedAt": "2016-02-19T22:41:22+00:00", 
+            "CustomCookbooksSource": {
+                "Url": "****FILTERED****", 
+                "Username": "****FILTERED****", 
+                "Password": "*****FILTERED*****", 
+                "Type": "s3"
+            }, 
+            "ConfigurationManager": {
+                "Version": "12", 
+                "Name": "Chef"
+            }, 
+            "ChefConfiguration": {}, 
+            "DefaultSubnetId": "subnet-12345678", 
+            "DefaultSshKeyName": "production-key", 
+            "DefaultInstanceProfileArn": "arn:aws:iam::123456789:instance-profile/aws-opsworks-ec2-role", 
+            "Attributes": {
+                "Color": "rgb(45, 114, 184)"
+            }, 
+            "DefaultOs": "Custom", 
+            "Arn": "arn:aws:opsworks:us-west-1:123456789:stack/fake-stack-id-123456789/", 
+            "AgentVersion": "4006-20160121174723"
+        }
+    ]
+}

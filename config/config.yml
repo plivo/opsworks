@@ -1,0 +1,8 @@
+default:
+  # Interval at which to poll opsworks API to check deployments.
+  pollInterval: 10000
+  verbosity: info
+  logfile: /tmp/opsworks.log
+  alias:
+    p-mediaserver: 'layer:mediaserver,env:production'
+    s-mediaserver: 'layer:mediaserver,env:staging'

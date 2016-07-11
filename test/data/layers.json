@@ -1,0 +1,144 @@
+{
+    "Layers": [
+        {
+            "StackId": "123456789-random-id", 
+            "LifecycleEventConfiguration": {
+                "Shutdown": {
+                    "DelayUntilElbConnectionsDrained": false, 
+                    "ExecutionTimeout": 120
+                }
+            }, 
+            "CustomRecipes": {
+                "Undeploy": [], 
+                "Setup": [
+                    "common::default"
+                ], 
+                "Configure": [], 
+                "Shutdown": [
+                    "common::shutdown"
+                ], 
+                "Deploy": []
+            }, 
+            "Packages": [], 
+            "Name": "Database Layer", 
+            "CustomSecurityGroupIds": [
+                "sg-12345"
+            ], 
+            "CustomJson": "{\n  \"env\": \"production\",\n  \"profile\": \"production\",\n  \"role\": \"tata-vpn\",\n  \"sensu\": {\n    \"subscriptions\": [\n      \"basic-server-checks\",\n      \"basic-server-metrics\"\n    ]\n  }\n}", 
+            "DefaultRecipes": {
+                "Undeploy": [], 
+                "Setup": [], 
+                "Configure": [], 
+                "Shutdown": [], 
+                "Deploy": []
+            }, 
+            "VolumeConfigurations": [], 
+            "AutoAssignElasticIps": false, 
+            "EnableAutoHealing": true, 
+            "AutoAssignPublicIps": false, 
+            "UseEbsOptimizedInstances": false, 
+            "LayerId": "123456789-random-id-obfuscated", 
+            "Attributes": {
+                "JvmVersion": null, 
+                "RailsStack": null, 
+                "EnableHaproxyStats": null, 
+                "MysqlRootPasswordUbiquitous": null, 
+                "NodejsVersion": null, 
+                "HaproxyHealthCheckUrl": null, 
+                "GangliaPassword": null, 
+                "Jvm": null, 
+                "HaproxyHealthCheckMethod": null, 
+                "RubyVersion": null, 
+                "HaproxyStatsPassword": null, 
+                "MysqlRootPassword": null, 
+                "JavaAppServer": null, 
+                "MemcachedMemory": null, 
+                "HaproxyStatsUrl": null, 
+                "BundlerVersion": null, 
+                "PassengerVersion": null, 
+                "ManageBundler": null, 
+                "JavaAppServerVersion": null, 
+                "HaproxyStatsUser": null, 
+                "GangliaUser": null, 
+                "JvmOptions": null, 
+                "EcsClusterArn": null, 
+                "RubygemsVersion": null, 
+                "GangliaUrl": null
+            }, 
+            "Shortname": "database", 
+            "DefaultSecurityGroupNames": [], 
+            "Type": "custom", 
+            "CreatedAt": "2016-03-29T04:18:04+00:00"
+        },
+        {
+            "StackId": "123456789-random-id", 
+            "LifecycleEventConfiguration": {
+                "Shutdown": {
+                    "DelayUntilElbConnectionsDrained": false, 
+                    "ExecutionTimeout": 120
+                }
+            }, 
+            "CustomRecipes": {
+                "Undeploy": [], 
+                "Setup": [
+                    "common::default"
+                ], 
+                "Configure": [], 
+                "Shutdown": [
+                    "common::shutdown"
+                ], 
+                "Deploy": []
+            }, 
+            "Packages": [], 
+            "Name": "WebApp Layer", 
+            "CustomSecurityGroupIds": [
+                "sg-12345"
+            ], 
+            "CustomJson": "{\n  \"env\": \"production\",\n  \"profile\": \"production\",\n  \"role\": \"tata-vpn\",\n  \"sensu\": {\n    \"subscriptions\": [\n      \"basic-server-checks\",\n      \"basic-server-metrics\"\n    ]\n  }\n}", 
+            "DefaultRecipes": {
+                "Undeploy": [], 
+                "Setup": [], 
+                "Configure": [], 
+                "Shutdown": [], 
+                "Deploy": []
+            }, 
+            "VolumeConfigurations": [], 
+            "AutoAssignElasticIps": false, 
+            "EnableAutoHealing": true, 
+            "AutoAssignPublicIps": false, 
+            "UseEbsOptimizedInstances": false, 
+            "LayerId": "123456789-random-id-obfuscated-2", 
+            "Attributes": {
+                "JvmVersion": null, 
+                "RailsStack": null, 
+                "EnableHaproxyStats": null, 
+                "MysqlRootPasswordUbiquitous": null, 
+                "NodejsVersion": null, 
+                "HaproxyHealthCheckUrl": null, 
+                "GangliaPassword": null, 
+                "Jvm": null, 
+                "HaproxyHealthCheckMethod": null, 
+                "RubyVersion": null, 
+                "HaproxyStatsPassword": null, 
+                "MysqlRootPassword": null, 
+                "JavaAppServer": null, 
+                "MemcachedMemory": null, 
+                "HaproxyStatsUrl": null, 
+                "BundlerVersion": null, 
+                "PassengerVersion": null, 
+                "ManageBundler": null, 
+                "JavaAppServerVersion": null, 
+                "HaproxyStatsUser": null, 
+                "GangliaUser": null, 
+                "JvmOptions": null, 
+                "EcsClusterArn": null, 
+                "RubygemsVersion": null, 
+                "GangliaUrl": null
+            }, 
+            "Shortname": "webapp", 
+            "DefaultSecurityGroupNames": [], 
+            "Type": "custom", 
+            "CreatedAt": "2016-03-29T04:18:04+00:00"
+        }
+    ]
+}

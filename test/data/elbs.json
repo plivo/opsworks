@@ -1,0 +1,26 @@
+{
+    "ElasticLoadBalancers": [
+        {
+            "StackId": "fake-stack-id-123456789",
+            "ElasticLoadBalancerName": "fake-loadbalancer-123456",
+            "VpcId": "vpc-6c260509",
+            "Ec2InstanceIds": [
+                "i-instance1",
+                "i-instance2",
+                "i-instance3",
+                "i-instance4"
+            ],
+            "Region": "us-west-1",
+            "DnsName": "afakeelbdns.us-west-1.elb.amazonaws.com",
+            "LayerId": "123456789-random-id-obfuscated",
+            "AvailabilityZones": [
+                "us-west-1a",
+                "us-west-1b"
+            ],
+            "SubnetIds": [
+                "subnet-number1",
+                "subnet-number2"
+            ]
+        }
+    ]
+}

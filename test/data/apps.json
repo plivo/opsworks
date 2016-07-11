@@ -1,0 +1,52 @@
+{
+    "Apps": [
+        {
+            "AppId": "123456789-abcdefgh-123456789",
+            "AppSource": {
+                "Revision": "master",
+                "SshKey": "*****FILTERED*****",
+                "Type": "git",
+                "Url": "git@github.com:repo/dummyapp1.git"
+            },
+            "Attributes": {
+                "AutoBundleOnDeploy": "true",
+                "AwsFlowRubySettings": "{}",
+                "DocumentRoot": null,
+                "RailsEnv": null
+            },
+            "CreatedAt": "2016-05-31T21:58:24+00:00",
+            "DataSources": [],
+            "Description": "DummyApp1",
+            "EnableSsl": false,
+            "Name": "Dummy App 1",
+            "Shortname": "dummyapp1",
+            "SslConfiguration": {},
+            "StackId": "fakestackid-123456",
+            "Type": "other"
+        },
+        {
+            "AppId": "123456789-abcdefgh-123456789",
+            "AppSource": {
+                "Revision": "master",
+                "SshKey": "*****FILTERED*****",
+                "Type": "git",
+                "Url": "git@github.com:repo/dummyapp2.git"
+            },
+            "Attributes": {
+                "AutoBundleOnDeploy": "true",
+                "AwsFlowRubySettings": "{}",
+                "DocumentRoot": null,
+                "RailsEnv": null
+            },
+            "CreatedAt": "2016-05-31T21:58:24+00:00",
+            "DataSources": [],
+            "Description": "DummyApp2",
+            "EnableSsl": false,
+            "Name": "Dummy App 2",
+            "Shortname": "dummyapp2",
+            "SslConfiguration": {},
+            "StackId": "fakestackid-123456",
+            "Type": "other"
+        }
+    ]
+}

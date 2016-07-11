@@ -1,0 +1,28 @@
+{
+    "InstanceStates": [
+        {
+            "InstanceId": "i-instance1",
+            "ReasonCode": "N/A",
+            "State": "InService",
+            "Description": "N/A"
+        },
+        {
+            "InstanceId": "i-instance2",
+            "ReasonCode": "N/A",
+            "State": "InService",
+            "Description": "N/A"
+        },
+        {
+            "InstanceId": "i-instance3",
+            "ReasonCode": "N/A",
+            "State": "InService",
+            "Description": "N/A"
+        },
+        {
+            "InstanceId": "i-instance4",
+            "ReasonCode": "N/A",
+            "State": "InService",
+            "Description": "N/A"
+        }
+    ]
+}

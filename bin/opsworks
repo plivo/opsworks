@@ -1,0 +1,107 @@
+#!/usr/bin/env node
+var CommandRunner   = require('./../lib/commandrunner');
+var Logger          = require('./../lib/logger');
+var config          = require('./../lib/config');
+
+var argv    = require('yargs')
+  .usage('$0 <command> [args]')
+  .strict()
+  .command('stacks', 'list OpsWorks stacks', function (yargs) {
+    yargs.command = 'toooo';
+    return yargs
+    .usage('$0 stacks\nWill list all the stacks matching your filters')
+    .option('f', {
+      description: 'Filters'
+    })
+  }, function(argv) { argv.command = 'stacks' })
+  .command('deployments', 'list OpsWorks deployments', function (yargs) {
+    yargs.command = 'toooo';
+    return yargs
+    .usage('$0 deployments\nWill list all the deployments on stacks matching your filters')
+    .option('f', {
+      description: 'Filters'
+    })
+    .boolean('i').alias('i', 'instances').describe('i','Show instances affected by deployment').default('i',false)
+    .option('n', {
+      description: 'Number of deployments to display per stack'      
+    })
+    .number('n')
+    .default('n',5);
+  }, function(argv) { argv.command = 'deployments' })
+  .command('instances', 'list instances', function (yargs) {
+    return yargs
+    .usage('$0 instances\nWill list all instances per stack&layer matching your filters.')
+    .option('f', {
+      description: 'Filters'
+    })
+  }, function(argv) { argv.command = 'instances' })
+  .command('apps', 'list apps', function (yargs) {
+    return yargs
+    .usage('$0 apps\nWill list all apps per stack matching your filters.')
+    .option('f', {
+      description: 'Filters'
+    })
+  }, function(argv) { argv.command = 'apps' })
+  .command('elbs', 'list elastic load balancers', function (yargs) {
+    return yargs
+    .usage('$0 apps\nWill list all ELBs per stack/layers matching your filters.')
+    .option('f', {
+      description: 'Filters'
+    })
+  }, function(argv) { argv.command = 'elbs' })
+  .command('update', 'updates cookbooks', function (yargs) {
+    return yargs
+    .usage('$0 update\nWill update the cookbooks on the stacks and layers matching your filters, and wait for the update to be completed.')
+    .option('f', {
+      description: 'Filters'
+    })
+  }, function(argv) { argv.command = 'update' })
+  .command('setup', 'runs setup recipes', function (yargs) {
+    return yargs
+    .usage('$0 stacks\nRuns the setup deployment on the stacks and layers matching your filters, and wait for the setup to be completed.')
+    .option('f', {
+      description: 'Filters'
+    })
+    .boolean('u').alias('u','update-first').describe('u','Update the cookbooks on the instances first')
+    .default('u',false)
+  }, function(argv) { argv.command = 'setup' })
+  .command('configure', 'runs configure recipes', function (yargs) {
+    return yargs
+    .usage('$0 configure\nRuns the configure deployment on the stacks and layers matching your filters, and wait for the configuration to be completed.')
+    .option('f', {
+      description: 'Filters'
+    })
+    .boolean('u').alias('u','update-first').describe('u','Update the cookbooks on the instances first')
+    .default('u',false)
+  }, function(argv) { argv.command = 'configure' })
+  .command('deploy <application_name>', 'runs deploy recipes', function (yargs) {
+    return yargs
+    .usage('$0 deploy <application_name>\nRuns the "deploy" deployment on the stacks and layers matching your filters, and wait for the deployment to be completed.')
+    .option('f', {
+      description: 'Filters'
+    })
+    .boolean('u').alias('u','update-first').describe('u','Update the cookbooks on the instances first')
+    .default('u',false)
+  }, function(argv) { argv.command = 'deploy' })
+  .command('recipes <recipes_list>', 'runs custom recipes', function (yargs) {
+    return yargs
+    .usage('$0 recipes')
+    .option('f', {
+      description: 'Filters'
+    })
+    .boolean('u').alias('u','update-first').describe('u','Update the cookbooks on the instances first')
+    .default('u',false)
+  }, function(argv) { argv.command = 'recipes' })
+  .help('h')
+  .boolean('v').alias('v', 'verbose').describe('v','Turns on verbose mode').default('v',false).global('v')
+  .boolean('y').alias('y', 'yes').describe('y','Automatic yes to prompts, to run non-interactively').default('y',false).global('y')
+  .example("deployments -f 'stack:production-*'",'List deployments for all production stacks')
+  .example("recipes common::setup_users",'Execute setup_users on all your stacks')
+  .example("setup -f layer:webapp,env:production",'Runs the setup deployment on "webapp" production layers')
+  .argv;
+
+var CR = new CommandRunner(argv);
+CR.runCommand().catch(err => {
+  Logger.error(err);
+  Logger.error(`Full verbose log at ${config.logfile}`)
+});
