@@ -3,7 +3,7 @@
 
 The missing OpsWorks CLI, run commands across stacks (and across regions), check your instances, apps, deployments, ELBs, with a smart filtering system.
 
-[![asciicast](https://asciinema.org/a/1fvxew0u6684jhvkj53ekkduc.png)](https://asciinema.org/a/1fvxew0u6684jhvkj53ekkduc)
+[![asciicast](https://asciinema.org/a/1fvxew0u6684jhvkj53ekkduc.png)](https://asciinema.org/a/1fvxew0u6684jhvkj53ekkduc?theme=solarized-dark)
 
 ## Installation
 
