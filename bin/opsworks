@@ -34,6 +34,7 @@ var argv    = require('yargs')
     .option('f', {
       description: 'Filters'
     })
+    .boolean('c').alias('c','csv').describe('c','CSV Output')
   }, function(argv) { argv.command = 'instances' })
   .command('apps', 'list apps', function (yargs) {
     return yargs
