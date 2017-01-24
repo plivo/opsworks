@@ -104,4 +104,4 @@ Developed by [Tristan Foureur](https://github.com/esya) for [Plivo](https://www.
 
 Copyright &copy; Plivo Inc.
 
-All code is licensed under the GPL, v3 or later. See `LICENSE.md` file for details.
+All code is licensed under the MIT License. See `LICENSE.md` file for details.

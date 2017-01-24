@@ -27,5 +27,5 @@
     "test": "mocha -R spec -r should -r sinon"
   },
   "author": "",
-  "license": "ISC"
+  "license": "MIT"
 }
