@@ -23,7 +23,7 @@ var argv    = require('yargs')
     })
     .boolean('i').alias('i', 'instances').describe('i','Show instances affected by deployment').default('i',false)
     .option('n', {
-      description: 'Number of deployments to display per stack'      
+      description: 'Number of deployments to display per stack'
     })
     .number('n')
     .default('n',5);
@@ -96,7 +96,13 @@ var argv    = require('yargs')
   .help('h')
   .boolean('v').alias('v', 'verbose').describe('v','Turns on verbose mode').default('v',false).global('v')
   .boolean('y').alias('y', 'yes').describe('y','Automatic yes to prompts, to run non-interactively').default('y',false).global('y')
+  .option('r', {
+    alias: 'region',
+    type: 'string',
+    describe: 'Specify a region specific stack'
+  })
   .example("deployments -f 'stack:production-*'",'List deployments for all production stacks')
+  .example("stacks -r 'us-east-1'",'List stacks for the us-east1 region')
   .example("recipes common::setup_users",'Execute setup_users on all your stacks')
   .example("setup -f layer:webapp,env:production",'Runs the setup deployment on "webapp" production layers')
   .argv;
